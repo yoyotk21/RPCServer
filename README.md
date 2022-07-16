@@ -1,0 +1,1 @@
+A basic client and server system set up. The client calls a Greeter object with a name and recieves a greeting string.
