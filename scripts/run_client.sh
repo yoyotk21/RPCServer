@@ -1,21 +1,24 @@
 #!/bin/bash
 
 # default values
-name="human"
-port="8000"
+index=0
+port1="8000"
+port2="8080"
 address="localhost"
 
-while getopts n:p:a: flag 
+while getopts i:p1:p2:a: flag 
 do
     case "${flag}" in 
-        n) name=${OPTARG};;
-        p) port=${OPTARG};;
+        i) index=${OPTARG};;
+        p1) port1=${OPTARG};;
+        p2) port2=${OPTARG};;
         a) address=${OPTARG};;
     esac
 done
 
-echo "Name: $name"
-echo "Port: $port"
+echo "Index: $index"
+echo "Port 1: $port1"
+echo "Port 2: $port2"
 echo "Address: $address"
 
 echo "Building..."
@@ -24,6 +27,7 @@ echo "Done building!"
 
 
 ../cmd/client/client \
-    -name ${name} \
-    -port ${port} \
-    -addr ${address}
+    -i ${index} \
+    -p1 ${port1} \
+    -p2 ${port2} \
+    -a ${address}
