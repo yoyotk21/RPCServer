@@ -8,8 +8,8 @@ import (
 )
 
 type Server struct {
-	Port           string
-	WelcomeMessage string
+	Port string
+	Data []uint64
 }
 
 func (server *Server) RunServer() {
@@ -22,11 +22,12 @@ func (server *Server) RunServer() {
 	// Closing the connection once the program is finished
 	defer listener.Close()
 
-	g := NewGreeter(server.WelcomeMessage)
+
+	database := newDatabase(server.Data)
 
 	rpcServer := rpc.NewServer()
 
-	rpcServer.Register(g)
+	rpcServer.Register(database)
 
 	// Infinite loop to run the server
 	for {
