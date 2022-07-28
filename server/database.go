@@ -1,7 +1,7 @@
 package server
 
 import (
-	dpf "github.com/sachaservan/vdpf"
+	"github.com/yoyotk21/RPCServer/dpf"
 )
 
 type Database struct {
