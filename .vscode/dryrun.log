@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/joelkalai/go/src/server'
+make: Leaving directory `/Users/joelkalai/go/src/server'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

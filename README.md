@@ -1,1 +1,3 @@
-A basic client and server system set up. The client calls a Greeter object with a name and recieves a greeting string.
+A server PIR Scheme using DPFs 
+
+To install, download [this repo](https://github.com/sachaservan/vdpf).
